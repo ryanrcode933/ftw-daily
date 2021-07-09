@@ -109,8 +109,8 @@ export const filters = [
       // to make filter customizations a bit easier.
       options: [
         {
-          key: 'towels',
-          label: 'Towels',
+          key: 'computers',
+          label: 'Computers',
         },
         {
           key: 'bathroom',
