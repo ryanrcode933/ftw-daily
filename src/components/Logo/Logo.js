@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import config from '../../config';
 import IconLogo from './IconLogo';
-import LogoImage from './JH_Tech_Logo.png';
+import LogoImage from './logojhtm.png';
 import css from './Logo.module.css';
 
 const Logo = props => {
