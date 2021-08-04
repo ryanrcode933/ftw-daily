@@ -85,9 +85,10 @@ export const filters = [
       // Note: label is not added through the translation files
       // to make filter customizations a bit easier.
       options: [
-        { key: 'smoke', label: 'Smoke' },
-        { key: 'electric', label: 'Electric' },
-        { key: 'wood', label: 'Wood' },
+        { key: 'computer', label: 'Computer' },
+        { key: 'printer', label: 'Printer' },
+        { key: 'monitor', label: 'Monitor' },
+        { key: 'accessory', label: 'Accessory' },
         { key: 'other', label: 'Other' },
       ],
     },
@@ -109,37 +110,37 @@ export const filters = [
       // to make filter customizations a bit easier.
       options: [
         {
-          key: 'computers',
-          label: 'Computers',
+          key: 'wifi',
+          label: 'WiFi',
         },
         {
-          key: 'bathroom',
-          label: 'Bathroom',
+          key: 'blutooth',
+          label: 'Blutooth',
         },
         {
-          key: 'swimming_pool',
-          label: 'Swimming pool',
+          key: 'high_definition',
+          label: 'High Definition',
         },
         {
-          key: 'own_drinks',
-          label: 'Own drinks allowed',
+          key: 'laptop',
+          label: 'Laptop',
         },
         {
-          key: 'jacuzzi',
-          label: 'Jacuzzi',
+          key: 'desktop',
+          label: 'Desktop',
         },
         {
-          key: 'audiovisual_entertainment',
-          label: 'Audiovisual entertainment',
+          key: 'audiovisual_integration',
+          label: 'Audiovisual Integration',
         },
-        {
-          key: 'barbeque',
-          label: 'Barbeque',
-        },
-        {
-          key: 'own_food_allowed',
-          label: 'Own food allowed',
-        },
+        //{
+          //key: 'barbeque',
+          //label: 'Barbeque',
+        //},
+        //{
+          //key: 'own_food_allowed',
+          //label: 'Own food allowed',
+        //},
       ],
     },
   },
