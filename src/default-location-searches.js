@@ -16,32 +16,32 @@ const defaultLocations = [
     },
   },
   {
-    id: 'default-turku',
+    id: 'default-Florida',
     predictionPlace: {
-      address: 'Turku, Finland',
-      bounds: new LatLngBounds(new LatLng(60.53045, 22.38197), new LatLng(60.33361, 22.06644)),
+      address: 'Florida, USA',
+      bounds: new LatLngBounds(new LatLng(27.910,-82.582), new LatLng(27.577, -82.808)),
     },
   },
   {
-    id: 'default-tampere',
+    id: 'default-Washington_DC',
     predictionPlace: {
-      address: 'Tampere, Finland',
-      bounds: new LatLngBounds(new LatLng(61.83657, 24.11838), new LatLng(61.42728, 23.5422)),
+      address: 'Washington DC, USA',
+      bounds: new LatLngBounds(new LatLng(38.995, -76.909), new LatLng(38.791, -77.119)),
     },
   },
-  {
+  /*{
     id: 'default-oulu',
     predictionPlace: {
       address: 'Oulu, Finland',
       bounds: new LatLngBounds(new LatLng(65.56434, 26.77069), new LatLng(64.8443, 24.11494)),
     },
-  },
-  {
+  },*/
+  /*{
     id: 'default-ruka',
     predictionPlace: {
       address: 'Ruka, Finland',
       bounds: new LatLngBounds(new LatLng(66.16997, 29.16773), new LatLng(66.16095, 29.13572)),
     },
-  },
+  },*/
 ];
 export default defaultLocations;
