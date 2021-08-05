@@ -9,8 +9,8 @@ import { NamedLink } from '../../components';
 import css from './SectionLocations.module.css';
 
 import baltimoreImage from './images/location_baltimore.jpeg';
-import rovaniemiImage from './images/location_rovaniemi.jpg';
-import rukaImage from './images/location_ruka.jpg';
+import floridaImage from './images/location_florida.jpg';
+import dcImage from './images/location_washington_dc.jpg';
 
 class LocationImage extends Component {
   render() {
@@ -56,14 +56,14 @@ const SectionLocations = props => {
           '?address=Maryland%2C%20USA&bounds=39.447%2C-76.362%2C39.158%2C-76.801'
         )}
         {locationLink(
-          'Rovaniemi',
-          rovaniemiImage,
-          '?address=Rovaniemi%2C%20Finland&bounds=67.18452510000002%2C27.32667850000007%2C66.1553745%2C24.736871199999996&origin=66.50394779999999%2C25.729390599999988'
+          'Florida',
+          floridaImage,
+          '?address=St.%20Petersburg%2C%20Florida%2C%20United%20States&bounds=27.910639933%2C-82.582464041%2C27.577110072%2C-82.808839707'
         )}
         {locationLink(
-          'Ruka',
-          rukaImage,
-          '?address=Ruka%2C%20Finland&bounds=66.1704578%2C29.14246849999995%2C66.1614402%2C29.110453699999994&origin=66.16594940000002%2C29.12646110000003'
+          'Washington DC',
+          dcImage,
+          '?address=Chevy%20Chase%2C%20Maryland%2C%20United%20States&bounds=39.011612977%2C-77.04670704%2C38.956765013%2C-77.112808993'
         )}
       </div>
     </div>
