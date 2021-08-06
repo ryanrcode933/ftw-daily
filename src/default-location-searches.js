@@ -29,19 +29,5 @@ const defaultLocations = [
       bounds: new LatLngBounds(new LatLng(38.995, -76.909), new LatLng(38.791, -77.119)),
     },
   },
-  /*{
-    id: 'default-oulu',
-    predictionPlace: {
-      address: 'Oulu, Finland',
-      bounds: new LatLngBounds(new LatLng(65.56434, 26.77069), new LatLng(64.8443, 24.11494)),
-    },
-  },*/
-  /*{
-    id: 'default-ruka',
-    predictionPlace: {
-      address: 'Ruka, Finland',
-      bounds: new LatLngBounds(new LatLng(66.16997, 29.16773), new LatLng(66.16095, 29.13572)),
-    },
-  },*/
 ];
 export default defaultLocations;
