@@ -26,7 +26,7 @@ const FAQPage = () => {
             "name": "1. How should our departments coordinate a transaction?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Answer: Once you have found a listing which matches your needs, contact the listing department and set up a preferred communication channel. All transactions should be handled through sharing of internall billing information."
+              "text": "Answer: Once you have found a listing which matches your needs, contact the listing department and set up a preferred communication channel. All transactions should be handled through sharing of internal billing information."
             }
           }
         ]

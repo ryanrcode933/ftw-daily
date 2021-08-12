@@ -144,6 +144,25 @@ export const filters = [
       ],
     },
   },
+  {
+    id: 'view',
+    label: 'View',
+    type: 'SelectSingleFilter',
+    group: 'secondary',
+    queryParamNames: ['pub-view'],
+    config: {
+      options: [
+        {
+        key: 'warranty_active',
+        label: 'Warranty Active',
+        },
+        {
+        key: 'warranty_expired',
+        label: 'Warranty Expired',
+        },
+      ]
+    }
+  }
 ];
 
 export const sortConfig = {
