@@ -45,7 +45,14 @@ const SectionHowItWorks = props => {
           </p>
         </div>
       </div>
-
+      <div className={css.title}>
+        <FormattedMessage id="SectionHowItWorks.titleLineThree" />
+      </div>
+      <div className={css.step}>
+        <h2 className={css.stepTitle}>
+          <FormattedMessage id="SectionHowItWorks.part4Title" />
+        </h2>
+      </div>
       <div className={css.createListingLink}>
         <NamedLink name="NewListingPage">
           <FormattedMessage id="SectionHowItWorks.createListingLink" />

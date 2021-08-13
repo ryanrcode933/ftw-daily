@@ -8,9 +8,9 @@ import { NamedLink } from '../../components';
 
 import css from './SectionLocations.module.css';
 
-import baltimoreImage from './images/location_baltimore.jpeg';
-import floridaImage from './images/location_florida.jpg';
-import dcImage from './images/location_washington_dc.jpg';
+import baltimoreImage from './images/location_baltimore_map.jpg';
+import floridaImage from './images/location_florida_map.jpg';
+import dcImage from './images/location_dc_map.jpg';
 
 class LocationImage extends Component {
   render() {
