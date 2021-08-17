@@ -2,17 +2,19 @@ import React from 'react';
 import config from '../../config';
 import { twitterPageURL } from '../../util/urlHelpers';
 import { StaticPage, TopbarContainer } from '../../containers';
+import { FormattedMessage } from '../../util/reactIntl';
 import {
   LayoutSingleColumn,
   LayoutWrapperTopbar,
   LayoutWrapperMain,
   LayoutWrapperFooter,
+  NamedLink,
   Footer,
   ExternalLink,
 } from '../../components';
 
 import css from './AboutPage.module.css';
-import image from './about-us-1056.jpg';
+import image from './about-us-1056.jpeg';
 
 const AboutPage = () => {
   const { siteTwitterHandle, siteFacebookPage } = config;
@@ -25,7 +27,7 @@ const AboutPage = () => {
       schema={{
         '@context': 'http://schema.org',
         '@type': 'AboutPage',
-        description: 'About Saunatime',
+        description: 'About JH Tech Marketplace',
         name: 'About page',
       }}
     >
@@ -35,55 +37,43 @@ const AboutPage = () => {
         </LayoutWrapperTopbar>
 
         <LayoutWrapperMain className={css.staticPageWrapper}>
-          <h1 className={css.pageTitle}>Experience the unique Finnish home sauna.</h1>
-          <img className={css.coverImage} src={image} alt="My first ice cream." />
+          <h1 className={css.pageTitle}>This printer is ready to get back to work.</h1>
+          <img className={css.coverImage} src={image} alt="ready for work." />
 
           <div className={css.contentWrapper}>
             <div className={css.contentSide}>
-              <p>Did you know that Finland has 3.2 million saunas - almost one sauna per person!</p>
+              <p>Did you know that Johns Hopkins departments are leasing printers which are going unused?</p>
             </div>
 
             <div className={css.contentMain}>
               <h2>
-                Most of the Finnish saunas are located at the homes of individuals - indeed, most
-                people in Finland live in an apartment with sauna in it. In addition, lots of people
-                have lakeside summer cottages, which also typically come with a separate sauna
-                building near the waterfront.
+                All of us working here at Johns Hopkins know that it is a very large organization. Within our
+                enterprise, there are many departments with underutilized technology assets.
+                While at the same time, there are many departments looking to source similar items.
               </h2>
 
               <p>
-                To truly experience a Finnish sauna, you need to look beyond the public saunas, and
-                instead visit a real home or cottage sauna. Saunatime makes this possible for
-                everyone. All our saunas are owned by individuals willing to let tourists and other
-                curious visitors to enter their sacred spaces.
+                The JH Tech Marketplace is here to bring these departments together.
               </p>
 
-              <h3 className={css.subtitle}>Are you a sauna owner?</h3>
+              <h3 className={css.subtitle}>Does your department have unused technology assets?</h3>
 
               <p>
-                Saunatime offers you a good way to earn some extra cash! If you're not using your
-                sauna every evening, why not rent it to other people while it's free. And even if
-                you are using your sauna every evening (we understand, it's so good), why not invite
-                other people to join you when the sauna is already warm! A shared sauna experience
-                is often a more fulfilling one.
+                JH Tech Marketplace offers you a landing page to list all of these items so that other departments can see they are available.
               </p>
 
               <h3 id="contact" className={css.subtitle}>
-                Create your own marketplace like Saunatime
+                Would you like to see what kind of technology items are available within Hopkins before looking to an outside vendor?
               </h3>
               <p>
-                Saunatime is brought to you by the good folks at{' '}
-                <ExternalLink href="http://sharetribe.com">Sharetribe</ExternalLink>. Would you like
-                to create your own marketplace platform a bit like Saunatime? Or perhaps a mobile
-                app? With Sharetribe it's really easy. If you have a marketplace idea in mind, do
-                get in touch!
+                Browse the assets other departments have listed 
+                at the
+                <NamedLink name="LandingPage">
+                  <FormattedMessage id="SectionAbout.newlisting"/>
+                </NamedLink>
+                first.
               </p>
-              <p>
-                You can also checkout our{' '}
-                <ExternalLink href={siteFacebookPage}>Facebook</ExternalLink> and{' '}
-                <ExternalLink href={siteTwitterPage}>Twitter</ExternalLink>.
-              </p>
-            </div>
+              </div>
           </div>
         </LayoutWrapperMain>
 
