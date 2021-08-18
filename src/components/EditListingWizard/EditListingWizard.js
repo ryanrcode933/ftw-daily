@@ -195,7 +195,7 @@ class EditListingWizard extends Component {
       showPayoutDetails: false,
     };
     this.handleCreateFlowTabScrolling = this.handleCreateFlowTabScrolling.bind(this);
-    this.handlePublishListing = this.handlePublishListing.bind(this);
+    //this.handlePublishListing = this.handlePublishListing.bind(this);
     this.handlePayoutModalClose = this.handlePayoutModalClose.bind(this);
     this.handlePayoutSubmit = this.handlePayoutSubmit.bind(this);
   }
@@ -211,7 +211,7 @@ class EditListingWizard extends Component {
   handleCreateFlowTabScrolling(shouldScroll) {
     this.hasScrolledToTab = shouldScroll;
   }
-
+/*
   handlePublishListing(id) {
     const { onPublishListingDraft, currentUser, stripeAccount } = this.props;
 
@@ -234,6 +234,7 @@ class EditListingWizard extends Component {
       });
     }
   }
+  */
 
   handlePayoutModalClose() {
     this.setState({ showPayoutDetails: false });
