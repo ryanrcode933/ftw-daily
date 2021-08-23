@@ -376,7 +376,7 @@ StripeConnectAccountFormComponent.propTypes = {
   ready: bool,
   savedCountry: string,
   stripeBankAccountLastDigits: string,
-  stripeAccountFetched: bool.isRequired,
+  //stripeAccountFetched: bool.isRequired,
   submitButtonText: string,
   fieldRenderProps: shape({
     handleSubmit: func,

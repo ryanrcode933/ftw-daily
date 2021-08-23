@@ -287,7 +287,7 @@ EditListingWizardTab.propTypes = {
     showListingsError: object,
     uploadImageError: object,
   }).isRequired,
-  fetchInProgress: bool.isRequired,
+  //fetchInProgress: bool.isRequired,
   newListingPublished: bool.isRequired,
   history: shape({
     push: func.isRequired,
@@ -309,7 +309,7 @@ EditListingWizardTab.propTypes = {
   }),
 
   handleCreateFlowTabScrolling: func.isRequired,
-  handlePublishListing: func.isRequired,
+  //handlePublishListing: func.isRequired,
   onUpdateListing: func.isRequired,
   onCreateListingDraft: func.isRequired,
   onImageUpload: func.isRequired,

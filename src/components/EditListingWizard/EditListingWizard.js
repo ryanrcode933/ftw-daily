@@ -391,8 +391,8 @@ class EditListingWizard extends Component {
                 marketplaceTabs={TABS}
                 errors={errors}
                 handleCreateFlowTabScrolling={this.handleCreateFlowTabScrolling}
-                handlePublishListing={this.handlePublishListing}
-                fetchInProgress={fetchInProgress}
+                //handlePublishListing={this.handlePublishListing}
+                //fetchInProgress={fetchInProgress}
               />
             );
           })}
@@ -521,12 +521,12 @@ EditListingWizard.propTypes = {
   stripeAccountError: propTypes.error,
   stripeAccountLinkError: propTypes.error,
 
-  fetchInProgress: bool.isRequired,
+  //fetchInProgress: bool.isRequired,
   getAccountLinkInProgress: bool.isRequired,
   payoutDetailsSaveInProgress: bool.isRequired,
   payoutDetailsSaved: bool.isRequired,
-  onPayoutDetailsFormChange: func.isRequired,
-  onGetStripeConnectAccountLink: func.isRequired,
+  //onPayoutDetailsFormChange: func.isRequired,
+  //onGetStripeConnectAccountLink: func.isRequired,
   onManageDisableScrolling: func.isRequired,
 
   // from withViewport
