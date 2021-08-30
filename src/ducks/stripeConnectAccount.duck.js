@@ -1,6 +1,6 @@
 // This file deals with Flex API which will create Stripe Custom Connect accounts
 // from given bank_account tokens.
-import config from '../config';
+/*import config from '../config';
 import { storableError } from '../util/errors';
 import * as log from '../util/log';
 
@@ -267,7 +267,7 @@ export const fetchStripeAccount = params => (dispatch, getState, sdk) => {
     });
 };
 
-export const getStripeConnectAccountLink = params => (dispatch, getState, sdk) => {
+/*export const getStripeConnectAccountLink = params => (dispatch, getState, sdk) => {
   const { failureURL, successURL, type } = params;
   dispatch(getAccountLinkRequest());
 
@@ -292,4 +292,4 @@ export const getStripeConnectAccountLink = params => (dispatch, getState, sdk) =
       log.error(err, 'get-stripe-account-link-failed', { stripeMessage });
       throw e;
     });
-};
+};*/

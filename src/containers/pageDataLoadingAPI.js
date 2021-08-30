@@ -49,9 +49,9 @@ const getPageDataLoadingAPI = () => {
     SearchPage: {
       loadData: SearchPageLoader,
     },
-    StripePayoutPage: {
-      loadData: StripePayoutPageLoader,
-    },
+    //StripePayoutPage: {
+      //loadData: StripePayoutPageLoader,
+    //},
     TransactionPage: {
       loadData: TransactionPageLoader,
       setInitialValues: TransactionPageInitialValues,

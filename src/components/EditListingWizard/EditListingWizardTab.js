@@ -309,7 +309,7 @@ EditListingWizardTab.propTypes = {
   }),
 
   handleCreateFlowTabScrolling: func.isRequired,
-  //handlePublishListing: func.isRequired,
+  handlePublishListing: func.isRequired,
   onUpdateListing: func.isRequired,
   onCreateListingDraft: func.isRequired,
   onImageUpload: func.isRequired,

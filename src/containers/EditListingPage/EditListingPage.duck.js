@@ -505,7 +505,7 @@ export function requestCreateListingDraft(data) {
     return sdk.ownListings
       .createDraft(data, queryParams)
       .then(response => {
-        //const id = response.data.data.id.uuid;
+        const id = response.data.data.id.uuid;
 
         // Add the created listing to the marketplace data
         dispatch(addMarketplaceEntities(response));

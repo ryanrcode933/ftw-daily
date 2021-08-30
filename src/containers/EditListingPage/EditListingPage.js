@@ -42,12 +42,12 @@ import {
 
 import css from './EditListingPage.module.css';
 
-//const STRIPE_ONBOARDING_RETURN_URL_SUCCESS = 'success';
-//const STRIPE_ONBOARDING_RETURN_URL_FAILURE = 'failure';
-//const STRIPE_ONBOARDING_RETURN_URL_TYPES = [
-  //STRIPE_ONBOARDING_RETURN_URL_SUCCESS,
-  //STRIPE_ONBOARDING_RETURN_URL_FAILURE,
-//];
+const STRIPE_ONBOARDING_RETURN_URL_SUCCESS = 'success';
+const STRIPE_ONBOARDING_RETURN_URL_FAILURE = 'failure';
+const STRIPE_ONBOARDING_RETURN_URL_TYPES = [
+  STRIPE_ONBOARDING_RETURN_URL_SUCCESS,
+  STRIPE_ONBOARDING_RETURN_URL_FAILURE,
+];
 
 const { UUID } = sdkTypes;
 
@@ -200,7 +200,7 @@ export const EditListingPageComponent = props => {
           onPayoutDetailsFormChange={onPayoutDetailsFormChange}
           onPayoutDetailsSubmit={onPayoutDetailsFormSubmit}
           //onGetStripeConnectAccountLink={onGetStripeConnectAccountLink}
-          getAccountLinkInProgress={getAccountLinkInProgress}
+          //getAccountLinkInProgress={getAccountLinkInProgress}
           onImageUpload={onImageUpload}
           onUpdateImageOrder={onUpdateImageOrder}
           onRemoveImage={onRemoveListingImage}
@@ -295,16 +295,16 @@ EditListingPageComponent.propTypes = {
 
 const mapStateToProps = state => {
   const page = state.EditListingPage;
-  const {
-    getAccountLinkInProgress,
-    getAccountLinkError,
+  //const {
+    //getAccountLinkInProgress,
+    //getAccountLinkError,
     //createStripeAccountInProgress,
     //createStripeAccountError,
     //updateStripeAccountError,
     //fetchStripeAccountError,
     //stripeAccount,
     //stripeAccountFetched,
-  } = state.stripeConnectAccount;
+  //} = state.stripeConnectAccount;
 
   const { currentUser } = state.user;
 
@@ -316,8 +316,7 @@ const mapStateToProps = state => {
     return listings.length === 1 ? listings[0] : null;
   };
   return {
-    getAccountLinkInProgress,
-    getAccountLinkError,
+    //getAccountLinkError,
     //createStripeAccountError,
     //updateStripeAccountError,
     //fetchStripeAccountError,
