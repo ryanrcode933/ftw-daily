@@ -457,23 +457,7 @@ export class ListingPageComponent extends Component {
                     onManageDisableScrolling={onManageDisableScrolling}
                   />
                 </div>
-                <BookingPanel
-                  className={css.bookingPanel}
-                  listing={currentListing}
-                  isOwnListing={isOwnListing}
-                  unitType={unitType}
-                  onSubmit={handleBookingSubmit}
-                  title={bookingTitle}
-                  subTitle={bookingSubTitle}
-                  authorDisplayName={authorDisplayName}
-                  onManageDisableScrolling={onManageDisableScrolling}
-                  timeSlots={timeSlots}
-                  fetchTimeSlotsError={fetchTimeSlotsError}
-                  onFetchTransactionLineItems={onFetchTransactionLineItems}
-                  lineItems={lineItems}
-                  fetchLineItemsInProgress={fetchLineItemsInProgress}
-                  fetchLineItemsError={fetchLineItemsError}
-                />
+
               </div>
             </div>
           </LayoutWrapperMain>
@@ -485,7 +469,7 @@ export class ListingPageComponent extends Component {
     );
   }
 }
-
+//booking panel info was removed from line 460
 ListingPageComponent.defaultProps = {
   unitType: config.bookingUnitType,
   currentUser: null,
