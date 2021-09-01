@@ -435,25 +435,7 @@ export class TransactionPanelComponent extends Component {
                 geolocation={geolocation}
                 showAddress={stateData.showAddress}
               />
-              {stateData.showBookingPanel ? (
-                <BookingPanel
-                  className={css.bookingPanel}
-                  titleClassName={css.bookingTitle}
-                  isOwnListing={false}
-                  listing={currentListing}
-                  title={listingTitle}
-                  subTitle={bookingSubTitle}
-                  authorDisplayName={authorDisplayName}
-                  onSubmit={onSubmitBookingRequest}
-                  onManageDisableScrolling={onManageDisableScrolling}
-                  timeSlots={timeSlots}
-                  fetchTimeSlotsError={fetchTimeSlotsError}
-                  onFetchTransactionLineItems={onFetchTransactionLineItems}
-                  lineItems={lineItems}
-                  fetchLineItemsInProgress={fetchLineItemsInProgress}
-                  fetchLineItemsError={fetchLineItemsError}
-                />
-              ) : null}
+
               <BreakdownMaybe
                 className={css.breakdownContainer}
                 transaction={currentTransaction}
@@ -466,6 +448,7 @@ export class TransactionPanelComponent extends Component {
             </div>
           </div>
         </div>
+        //removed booking panel from starting line 438
         <ReviewModal
           id="ReviewOrderModal"
           isOpen={this.state.isReviewModalOpen}
