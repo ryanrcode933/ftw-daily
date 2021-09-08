@@ -63,7 +63,7 @@ const SectionLocations = props => {
         {locationLink(
           'Washington DC',
           dcImage,
-          '?address=Chevy%20Chase%2C%20Maryland%2C%20United%20States&bounds=39.011612977%2C-77.04670704%2C38.956765013%2C-77.112808993'
+          '?address=Chevy%20Chase%2C%20Maryland%2C%20United%20States&bounds=39.05573277%2C-76.97831076%2C38.79250882%2C-77.24271858'
         )}
       </div>
     </div>

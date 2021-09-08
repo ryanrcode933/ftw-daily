@@ -448,7 +448,7 @@ export class TransactionPanelComponent extends Component {
             </div>
           </div>
         </div>
-        //removed booking panel from starting line 438
+
         <ReviewModal
           id="ReviewOrderModal"
           isOpen={this.state.isReviewModalOpen}
@@ -464,7 +464,7 @@ export class TransactionPanelComponent extends Component {
     );
   }
 }
-
+//removed booking panel from starting line 438
 TransactionPanelComponent.defaultProps = {
   rootClassName: null,
   className: null,
