@@ -96,13 +96,13 @@ const canonicalRootURL = process.env.REACT_APP_CANONICAL_ROOT_URL;
 const siteTitle = 'jh-tech-marketplace';
 
 // Twitter handle is needed in meta tags (twitter:site). Start it with '@' character
-const siteTwitterHandle = '@hopkinsmedicine';
+const siteTwitterHandle = '@sharetribe';
 
 // Instagram page is used in SEO schema (http://schema.org/Organization)
 const siteInstagramPage = null;
 
 // Facebook page is used in SEO schema (http://schema.org/Organization)
-const siteFacebookPage = 'https://www.facebook.com/JHTechHub/';
+const siteFacebookPage = 'https://www.facebook.com/Sharetribe/';
 
 // Social logins & SSO
 
