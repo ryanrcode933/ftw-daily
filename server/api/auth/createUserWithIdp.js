@@ -50,7 +50,7 @@ module.exports = (req, res) => {
 
   // Choose the idpClientId based on which authentication method is used.
   const idpClientId =
-    idpId === FACEBOOK_IDP_ID ? FACBOOK_APP_ID : idpId === GOOGLE_IDP_ID ? GOOGLE_CLIENT_ID : null : idpId === HOPKINS_PROXY_IDP_ID ? HOPKINS_PROXY_CLIENT_ID : null;
+    idpId === FACEBOOK_IDP_ID ? FACBOOK_APP_ID : idpId === GOOGLE_IDP_ID ? GOOGLE_CLIENT_ID : idpId === HOPKINS_PROXY_IDP_ID ? HOPKINS_PROXY_CLIENT_ID : null;
 
   sdk.currentUser
     .createWithIdp({ idpId, idpClientId, idpToken, ...rest })
