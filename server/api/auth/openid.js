@@ -85,7 +85,16 @@ const verifyCallback = (req, accessToken, refreshToken, profile, done) => {
 
 // ClientId is required when adding a new openid strategy to passport
 if (clientID) {
-  passport.use(new OpenIDStrategy(strategyOptions, verifyCallback));
+  passport.use(new OpenIDStrategy({
+    returnURL: 'http://localhost:3000/auth/openid/return'
+    realm: 'http://localhost:3000/'
+  },
+  function(identifier, done) {
+    User.findByOpenID({openId: identifier } function (err, user)
+      return done(err, user);
+    });
+  }
+))
 }
 
 exports.authenticateOpenID = (req, res, next) => {
