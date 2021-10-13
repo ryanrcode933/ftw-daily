@@ -230,6 +230,12 @@ export class AuthenticationPageComponent extends Component {
       window.location.href = `${baseUrl}/api/auth/google?${fromParam}${defaultReturnParam}${defaultConfirmParam}`;
     };
 
+    const authWithOpenID = () => {
+      const defaultRoutes = getDefaultRoutes();
+      const { baseUrl, fromParam, defaultReturnParam, defaultConfirmParam } = defaultRoutes;
+      window.location.href = `${baseUrl}/api/auth/openid?${fromParam}${defaultReturnParam}${defaultConfirmParam}`;
+    };
+
     const idp = this.state.authInfo
       ? this.state.authInfo.idpId.replace(/^./, str => str.toUpperCase())
       : null;
@@ -273,6 +279,12 @@ export class AuthenticationPageComponent extends Component {
     ) : (
       <FormattedMessage id="AuthenticationPage.signupWithGoogle" />
     );
+
+    const openidButtonText = isLogin ? (
+      <FormattedMessage id="AuthenticationPage.loginWithopenid" />
+    ) : (
+      <FormattedMessage id="AuthenticationPage.signupWithopenid" />
+    );
     const socialLoginButtonsMaybe = showSocialLogins ? (
       <div className={css.idpButtons}>
         <div className={css.socialButtonsOr}>
@@ -298,6 +310,14 @@ export class AuthenticationPageComponent extends Component {
             </SocialLoginButton>
           </div>
         ) : null}
+
+        <div className={css.socialButtonWrapper}>
+          <SocialLoginButton onClick={() => authWithOpenID()}>
+            <span className={css.buttonIcon}>{OpenIDLogo}</span>
+            {openidButtonText}
+          </SocialLoginButton>
+        </div>
+
       </div>
     ) : null;
 

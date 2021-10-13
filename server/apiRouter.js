@@ -22,6 +22,7 @@ const { authenticateFacebook, authenticateFacebookCallback } = require('./api/au
 const { authenticateGoogle, authenticateGoogleCallback } = require('./api/auth/google');
 
 const router = express.Router();
+const { authenticateOpenID, authenticateOpenIDCallback } = require('./api/auth/openid');
 
 // ================ API router middleware: ================ //
 
@@ -79,5 +80,15 @@ router.get('/auth/google', authenticateGoogle);
 // with Google. In this route a Passport.js custom callback is used for calling
 // loginWithIdp endpoint in Flex API to authenticate user to Flex
 router.get('/auth/google/callback', authenticateGoogleCallback);
+
+//OpenID authentication endpoints
+
+// This endpoint is called when user wants to initiate authenticaiton with openid
+router.get('/auth/openid', authenticateOpenID);
+
+// This is the route for callback URL the user is redirected after authenticating
+// with OpenID. In this route a Passport.js custom callback is used for calling
+// loginWithIdp endpoint in Flex API to authenticate user to Flex
+router.get('/auth/openid/callback', authenticateOpenIDCallback);
 
 module.exports = router;

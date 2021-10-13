@@ -15,6 +15,9 @@ const GOOGLE_CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 const FACEBOOK_IDP_ID = 'facebook';
 const GOOGLE_IDP_ID = 'google';
 
+const openid_PROXY_CLIENT_ID = process.env.openid_PROXY_CLIENT_ID;
+const openid_PROXY_IDP_ID = process.env.openid_PROXY_IDP_ID;
+
 // Instantiate HTTP(S) Agents with keepAlive set to true.
 // This will reduce the request time for consecutive requests by
 // reusing the existing TCP connection, thus eliminating the time used
@@ -47,7 +50,7 @@ module.exports = (req, res) => {
 
   // Choose the idpClientId based on which authentication method is used.
   const idpClientId =
-    idpId === FACEBOOK_IDP_ID ? FACBOOK_APP_ID : idpId === GOOGLE_IDP_ID ? GOOGLE_CLIENT_ID : null;
+    idpId === FACEBOOK_IDP_ID ? FACBOOK_APP_ID : idpId === GOOGLE_IDP_ID ? GOOGLE_CLIENT_ID : null; : idpId === HOPKINS_PROXY_IDP_ID ? HOPKINS_PROXY_CLIENT_ID : null;
 
   sdk.currentUser
     .createWithIdp({ idpId, idpClientId, idpToken, ...rest })
