@@ -266,8 +266,7 @@ export class AuthenticationPageComponent extends Component {
     // Social login buttons
     const showFacebookLogin = !!process.env.REACT_APP_FACEBOOK_APP_ID;
     const showGoogleLogin = !!process.env.REACT_APP_GOOGLE_CLIENT_ID;
-    const showOpenIDLogin = !!process.env.REACT_APP_HOPKINS_CLIENT_ID;
-    const showSocialLogins = showFacebookLogin || showGoogleLogin || showOpenIDLogin;
+        const showSocialLogins = showFacebookLogin || showGoogleLogin;
 
     const facebookButtonText = isLogin ? (
       <FormattedMessage id="AuthenticationPage.loginWithFacebook" />
@@ -286,6 +285,14 @@ export class AuthenticationPageComponent extends Component {
     ) : (
       <FormattedMessage id="AuthenticationPage.signupWithopenid" />
     );
+
+    <div className={css.socialButtonWrapper}>
+      <SocialLoginButton onClick={() => authWithOpenID()}>
+        <span className={css.buttonIcon}>{OpenIDLogo}</span>
+        {openidButtonText}
+      </SocialLoginButton>
+    </div>
+
 
     const socialLoginButtonsMaybe = showSocialLogins ? (
       <div className={css.idpButtons}>
@@ -311,15 +318,6 @@ export class AuthenticationPageComponent extends Component {
               {googleButtonText}
             </SocialLoginButton>
           </div>
-        ) : null}
-
-        {showOpenIDLogin ? (
-        <div className={css.socialButtonWrapper}>
-          <SocialLoginButton onClick={() => authWithOpenID()}>
-            <span className={css.buttonIcon}>{OpenIDLogo}</span>
-            {openidButtonText}
-          </SocialLoginButton>
-        </div>
         ) : null}
 
       </div>
