@@ -286,7 +286,7 @@ export class AuthenticationPageComponent extends Component {
     ) : (
       <FormattedMessage id="AuthenticationPage.signupWithopenid" />
     );
-    
+
     const socialLoginButtonsMaybe = showSocialLogins ? (
       <div className={css.idpButtons}>
         <div className={css.socialButtonsOr}>
@@ -313,7 +313,7 @@ export class AuthenticationPageComponent extends Component {
           </div>
         ) : null}
 
-        {show showOpenIDLogin ? (
+        {showOpenIDLogin ? (
         <div className={css.socialButtonWrapper}>
           <SocialLoginButton onClick={() => authWithOpenID()}>
             <span className={css.buttonIcon}>{OpenIDLogo}</span>
