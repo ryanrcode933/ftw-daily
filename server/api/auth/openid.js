@@ -90,7 +90,7 @@ if (clientID) {
     realm: 'http://localhost:3000/'
   },
   function(identifier, done) {
-    User.findByOpenID({openId: identifier } function (err, user) {
+    User.findByOpenID({openId: identifier }, function (err, user) {
       return done(err, user);
     });
   }
