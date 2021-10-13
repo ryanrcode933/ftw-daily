@@ -291,7 +291,7 @@ export class AuthenticationPageComponent extends Component {
         <span className={css.buttonIcon}>{OpenIDLogo}</span>
         {openidButtonText}
       </SocialLoginButton>
-    </div>
+    </div>;
 
 
     const socialLoginButtonsMaybe = showSocialLogins ? (
