@@ -43,7 +43,7 @@ import { sendVerificationEmail } from '../../ducks/user.duck';
 import { manageDisableScrolling } from '../../ducks/UI.duck';
 
 import css from './AuthenticationPage.module.css';
-import { FacebookLogo, GoogleLogo } from './socialLoginLogos';
+import { FacebookLogo, GoogleLogo, OpenIDLogo } from './socialLoginLogos';
 
 export class AuthenticationPageComponent extends Component {
   constructor(props) {
@@ -230,7 +230,7 @@ export class AuthenticationPageComponent extends Component {
       window.location.href = `${baseUrl}/api/auth/google?${fromParam}${defaultReturnParam}${defaultConfirmParam}`;
     };
 
-    const authWithOpenID = () => {
+    const authWithopenid = () => {
       const defaultRoutes = getDefaultRoutes();
       const { baseUrl, fromParam, defaultReturnParam, defaultConfirmParam } = defaultRoutes;
       window.location.href = `${baseUrl}/api/auth/openid?${fromParam}${defaultReturnParam}${defaultConfirmParam}`;
@@ -266,7 +266,8 @@ export class AuthenticationPageComponent extends Component {
     // Social login buttons
     const showFacebookLogin = !!process.env.REACT_APP_FACEBOOK_APP_ID;
     const showGoogleLogin = !!process.env.REACT_APP_GOOGLE_CLIENT_ID;
-    const showSocialLogins = showFacebookLogin || showGoogleLogin;
+    const showopenidLogin = !!process.env.REACT_APP_HOPKINS_CLIENT_ID;
+    const showSocialLogins = showFacebookLogin || showGoogleLogin || showopenidlogin;
 
     const facebookButtonText = isLogin ? (
       <FormattedMessage id="AuthenticationPage.loginWithFacebook" />
@@ -309,6 +310,15 @@ export class AuthenticationPageComponent extends Component {
             <SocialLoginButton onClick={() => authWithGoogle()}>
               <span className={css.buttonIcon}>{GoogleLogo}</span>
               {googleButtonText}
+            </SocialLoginButton>
+          </div>
+        ) : null}
+
+        {showopenidLogin ? (
+          <div className={css.socialButtonWrapper}>
+            <SocialLoginButton onClick={() => authWithopenid()}>
+              <span className={css.buttonIcon}>{OpenIDLogo}</span>
+              {openidButtonText}
             </SocialLoginButton>
           </div>
         ) : null}

@@ -110,7 +110,7 @@ exports.authenticateOpenID = (req, res, next) => {
 
   const paramsAsString = JSON.stringify(params);
 
-  passport.authenticate('OpenID', {
+  passport.authenticate('openid', {
     state: paramsAsString,
   })(req, res, next);
 };
