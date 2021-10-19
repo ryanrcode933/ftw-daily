@@ -338,7 +338,7 @@ export class AuthenticationPageComponent extends Component {
             {openidButtonText}
           </SocialLoginButton>
         </div>
-    
+
         {socialLoginButtonsMaybe}
       </div>
     );
