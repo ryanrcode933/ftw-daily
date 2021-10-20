@@ -86,8 +86,8 @@ const verifyCallback = (req, accessToken, refreshToken, profile, done) => {
 // ClientId is required when adding a new openid strategy to passport
 if (clientID) {
   passport.use(new OpenIDStrategy({
-    returnURL: 'https://jhtechdev.hereokuapp.com/auth/openid/return',
-    realm: 'https://jhtechdev.herokuapp.com/'
+    returnURL: 'http://localhost:3000/auth/openid/return',
+    realm: 'http://localhost:3000/'
   },
   function(identifier, done) {
     User.findByOpenID({openid: identifier }, function (err, user) {
