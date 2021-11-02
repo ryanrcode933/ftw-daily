@@ -47,13 +47,13 @@ const verifyCallback = (req, accessToken, refreshToken, profile, done) => {
   // There is no official documentation about this, but through testing it seems like this can be trusted
   // For reference: https://stackoverflow.com/questions/19278201/oauth-request-verified-email-address-from-openid
 
-  const user = {
-    userId: profile.id,
-    firstName,
-    lastName,
-    email,
-    emailVerified: true,
-  };
+  //const user = {
+  //  userId: profile.id,
+  //  firstName,
+    //lastName,
+    //email,
+    //emailVerified: true,
+  //};
 
   const state = req.query.state;
   const queryParams = JSON.parse(state);
