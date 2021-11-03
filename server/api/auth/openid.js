@@ -1,3 +1,4 @@
+console.log("hello");
 const passport = require('passport');
 var OpenIDStrategy = require('passport-openid').Strategy;
 const loginWithIdp = require('./loginWithIdp');
@@ -37,7 +38,6 @@ const verifyCallback = (req, accessToken, refreshToken, profile, done) => {
   // our custom id provider in Flex
 
   const locale = Object.keys(profile._json.firstName.localized)[0];
-
   const firstName = profile._json.firstName.localized[locale];
   const lastName = profile._json.lastName.localized[locale];
   const email = profile.emails[0].value;
