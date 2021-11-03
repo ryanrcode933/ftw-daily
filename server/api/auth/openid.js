@@ -1,4 +1,3 @@
-console.log("hello");
 const passport = require('passport');
 var OpenIDStrategy = require('passport-openid').Strategy;
 const loginWithIdp = require('./loginWithIdp');
