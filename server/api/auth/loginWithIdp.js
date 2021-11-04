@@ -92,6 +92,7 @@ module.exports = (err, user, req, res, idpClientId, idpId) => {
       idpToken: user.idpToken,
     })
     .then(response => {
+     console.log(response)
       if (response.status === 200) {
         // If the user was authenticated, redirect back to to LandingPage
         // We need to add # to the end of the URL because otherwise Facebook
